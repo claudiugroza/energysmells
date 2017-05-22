@@ -14,14 +14,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
       switch (item.getItemId()) {
-        case R.id.navigation_home:
-          getSupportFragmentManager().beginTransaction().replace(R.id.content, new IgsFragment()).commit();
+        case R.id.navigation_hmu:
+          getSupportFragmentManager().beginTransaction().replace(R.id.content, new HMUFragment()).commit();
           return true;
-        case R.id.navigation_dashboard:
-          getSupportFragmentManager().beginTransaction().replace(R.id.content, new IgsFragment()).commit();
+        case R.id.navigation_igsu:
+          getSupportFragmentManager().beginTransaction().replace(R.id.content, new IGSFragment()).commit();
           return true;
-        case R.id.navigation_notifications:
-          getSupportFragmentManager().beginTransaction().replace(R.id.content, new IgsFragment()).commit();
+        case R.id.navigation_mim:
+          getSupportFragmentManager().beginTransaction().replace(R.id.content, new MIMFragment()).commit();
           return true;
       }
       return false;
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
     navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    navigation.setSelectedItemId(R.id.navigation_hmu);
   }
 
 }
