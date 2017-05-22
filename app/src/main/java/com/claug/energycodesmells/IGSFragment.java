@@ -13,9 +13,11 @@ import android.widget.Button;
 
 public class IGSFragment extends Fragment {
 
+  /**/
   private int igsuSubject;
 
   public IGSFragment() {
+
   }
 
   @Nullable
@@ -29,7 +31,7 @@ public class IGSFragment extends Fragment {
     bRunTest.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
-        doExperiment(root.getContext());
+        doExperiment(v.getContext());
       }
     });
 
@@ -38,13 +40,13 @@ public class IGSFragment extends Fragment {
 
   public void doExperiment(Context context) {
     final ProgressDialog dialog = ProgressDialog
-        .show(context, "Running...", "Internal Getter Setter", true);
+        .show(context, "Running...", "Internal Getter/Setter", true);
 
     Thread thread = new Thread() {
       @Override
       public void run() {
         for (int i = 0; i < 100000000; i++) {
-          setIgsuSubject(123);
+          setIgsuSubject(i);
           int value = getIgsuSubject();
         }
         dialog.dismiss();
@@ -61,4 +63,5 @@ public class IGSFragment extends Fragment {
   public void setIgsuSubject(int igsuSubject) {
     this.igsuSubject = igsuSubject;
   }
+
 }

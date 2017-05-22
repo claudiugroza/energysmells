@@ -49,7 +49,8 @@ public class HMUFragment extends Fragment {
       @Override
       public void run() {
         for (int i = 0; i < 100000000; i++) {
-          map.put(i, i + "");
+          map.put(i, i + " ");
+          String value = map.get(i);
         }
         dialog.dismiss();
       }

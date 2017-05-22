@@ -37,7 +37,7 @@ public class MIMFragment extends Fragment {
 
   public void doExperiment(Context context) {
     final ProgressDialog dialog = ProgressDialog
-        .show(context, "Running...", "Internal Getter Setter", true);
+        .show(context, "Running...", "Member Ignoring Method", true);
 
     Thread thread = new Thread() {
       @Override
@@ -52,7 +52,7 @@ public class MIMFragment extends Fragment {
     thread.start();
   }
 
-  private Calendar getYesterday() {
+  public Calendar getYesterday() {
     final Calendar yesterdayToBe = Calendar.getInstance();
     yesterdayToBe.add(Calendar.DATE, -1);
 
