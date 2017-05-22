@@ -46,14 +46,18 @@ public class IGSFragment extends Fragment {
       @Override
       public void run() {
         for (int i = 0; i < 100000000; i++) {
-          setIgsuSubject(i);
-          int value = getIgsuSubject();
+          runSmell(i);
         }
         dialog.dismiss();
       }
     };
 
     thread.start();
+  }
+
+  private void runSmell(int i) {
+    setIgsuSubject(i);
+    int value = getIgsuSubject();
   }
 
   public int getIgsuSubject() {
