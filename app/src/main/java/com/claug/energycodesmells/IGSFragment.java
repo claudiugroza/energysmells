@@ -44,7 +44,7 @@ public class IGSFragment extends Fragment {
     Thread thread = new Thread() {
       @Override
       public void run() {
-        for (int i = 0; i < ExperimentConstants.TEST_REPETITIONS; i++) {
+        for (int i = 0; i < ExperimentConstants.IGS_TEST_REPETITIONS; i++) {
           runSmell(i);
         }
         dialog.dismiss();

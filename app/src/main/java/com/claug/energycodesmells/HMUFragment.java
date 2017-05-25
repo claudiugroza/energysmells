@@ -47,7 +47,7 @@ public class HMUFragment extends Fragment {
     Thread thread = new Thread() {
       @Override
       public void run() {
-        for (int i = 0; i < ExperimentConstants.TEST_REPETITIONS; i++) {
+        for (int i = 0; i < ExperimentConstants.HMU_TEST_REPETITIONS; i++) {
           map.put(i, i + " ");
           String value = map.get(i);
         }

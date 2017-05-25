@@ -41,7 +41,7 @@ public class MIMFragment extends Fragment {
     Thread thread = new Thread() {
       @Override
       public void run() {
-        for (int i = 0; i < ExperimentConstants.TEST_REPETITIONS; i++) {
+        for (int i = 0; i < ExperimentConstants.MIM_TEST_REPETITIONS; i++) {
           Calendar calendar = getYesterday();
         }
         dialog.dismiss();
