@@ -25,7 +25,6 @@ public class HMUFragment extends Fragment {
   @Override
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
       @Nullable Bundle savedInstanceState) {
-
     final View root = inflater.inflate(R.layout.fragment_generic, container, false);
 
     map = new HashMap<>();
@@ -48,7 +47,7 @@ public class HMUFragment extends Fragment {
     Thread thread = new Thread() {
       @Override
       public void run() {
-        for (int i = 0; i < 100000000; i++) {
+        for (int i = 0; i < ExperimentConstants.TEST_REPETITIONS; i++) {
           map.put(i, i + " ");
           String value = map.get(i);
         }
