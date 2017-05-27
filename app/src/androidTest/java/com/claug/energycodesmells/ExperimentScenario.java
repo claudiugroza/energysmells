@@ -40,12 +40,12 @@ public class ExperimentScenario {
   @LargeTest
   public void experimentScenario() {
 
-    BatteryGauge.log();
-
     for (int i = 0; i < ExperimentConstants.SCENARIO_REPETITIONS; i++) {
       ViewInteraction bottomNavigationItemView = onView(
           allOf(withId(R.id.navigation_hmu), withContentDescription("HMU"), isDisplayed()));
       bottomNavigationItemView.perform(click());
+
+      BatteryGauge.log();
 
       ViewInteraction appCompatButton = onView(
           allOf(withId(R.id.bRunTest), withText("Run test"), isDisplayed()));
@@ -57,6 +57,8 @@ public class ExperimentScenario {
           allOf(withId(R.id.navigation_igsu), withContentDescription("IGSU"), isDisplayed()));
       bottomNavigationItemView2.perform(click());
 
+      BatteryGauge.log();
+
       ViewInteraction appCompatButton2 = onView(
           allOf(withId(R.id.bRunTest), withText("Run test"), isDisplayed()));
       appCompatButton2.perform(click());
@@ -67,6 +69,8 @@ public class ExperimentScenario {
           allOf(withId(R.id.navigation_mim), withContentDescription("MIM"), isDisplayed()));
       bottomNavigationItemView3.perform(click());
 
+      BatteryGauge.log();
+
       ViewInteraction appCompatButton3 = onView(
           allOf(withId(R.id.bRunTest), withText("Run test"), isDisplayed()));
       appCompatButton3.perform(click());
@@ -74,7 +78,6 @@ public class ExperimentScenario {
       BatteryGauge.log();
     }
 
-    BatteryGauge.log();
   }
 
   @After
