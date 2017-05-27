@@ -55,8 +55,8 @@ public class IGSFragment extends Fragment {
   }
 
   private void runSmell(int i) {
-    setIgsuSubject(i);
-    int value = getIgsuSubject();
+    this.igsuSubject = i;
+    int value = igsuSubject;
   }
 
   public int getIgsuSubject() {
