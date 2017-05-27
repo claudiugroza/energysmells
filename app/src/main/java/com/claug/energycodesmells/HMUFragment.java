@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,7 +16,7 @@ import java.util.HashMap;
 
 public class HMUFragment extends Fragment {
 
-  private HashMap<Integer, String> map;
+  private SparseArray<String> map;
 
   public HMUFragment() {
 
@@ -27,7 +28,7 @@ public class HMUFragment extends Fragment {
       @Nullable Bundle savedInstanceState) {
     final View root = inflater.inflate(R.layout.fragment_generic, container, false);
 
-    map = new HashMap<>();
+    map = new SparseArray<>();
 
     final Button bRunTest = (Button) root.findViewById(R.id.bRunTest);
     bRunTest.setOnClickListener(new OnClickListener() {
