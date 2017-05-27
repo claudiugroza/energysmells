@@ -44,6 +44,7 @@ public class HMUFragment extends Fragment {
     final ProgressDialog dialog = ProgressDialog
         .show(context, "Running...", "HashMap Usage", true);
 
+    map.clear();
     Thread thread = new Thread() {
       @Override
       public void run() {
