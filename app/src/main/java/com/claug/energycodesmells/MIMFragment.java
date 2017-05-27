@@ -51,7 +51,7 @@ public class MIMFragment extends Fragment {
     thread.start();
   }
 
-  public Calendar getYesterday() {
+  public static Calendar getYesterday() {
     final Calendar yesterdayToBe = Calendar.getInstance();
     yesterdayToBe.add(Calendar.DATE, -1);
 
