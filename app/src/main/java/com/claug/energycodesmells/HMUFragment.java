@@ -19,7 +19,6 @@ public class HMUFragment extends Fragment {
   private HashMap<Integer, String> map = new HashMap<>();
 
   public HMUFragment() {
-    Log.i("", "HMUFragment: " + map);
   }
 
   @Nullable
