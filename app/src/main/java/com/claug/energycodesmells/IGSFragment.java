@@ -14,7 +14,7 @@ import android.widget.Button;
 public class IGSFragment extends Fragment {
 
   /**/
-  private int igsuSubject;
+  private int igsuSubject = 0;
 
   public IGSFragment() {
 
@@ -55,8 +55,8 @@ public class IGSFragment extends Fragment {
   }
 
   private void runSmell(int i) {
-    setIgsuSubject(i);
     int value = getIgsuSubject();
+    setIgsuSubject(value + i);
   }
 
   public int getIgsuSubject() {
