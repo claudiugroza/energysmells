@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -42,7 +41,6 @@ public class HMUFragment extends Fragment {
     final ProgressDialog dialog = ProgressDialog
         .show(context, "Running...", "HashMap Usage", true);
 
-    map.clear();
     Thread thread = new Thread() {
       @Override
       public void run() {
